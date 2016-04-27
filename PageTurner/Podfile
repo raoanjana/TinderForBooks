@@ -4,7 +4,7 @@
 use_frameworks!
 
 target 'PageTurner' do
-pod "Koloda"
+pod 'Koloda', '~> 3.0.0'
 pod 'Alamofire', '~> 3.3'
 end
 
