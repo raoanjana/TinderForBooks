@@ -76,6 +76,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C02898B31CD17E7C003614CB /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C0FF0A131CD1725400633269 /* ViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		C02898B41CD17E91003614CB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		C02898B51CD17EA2003614CB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		C0FF0A051CD1725300633269 = {
 			isa = PBXGroup;
 			children = (
@@ -99,10 +121,12 @@
 		C0FF0A101CD1725400633269 /* PageTurner */ = {
 			isa = PBXGroup;
 			children = (
+				C02898B51CD17EA2003614CB /* Models */,
 				C0FF0A111CD1725400633269 /* AppDelegate.swift */,
-				C0FF0A131CD1725400633269 /* ViewController.swift */,
+				C02898B31CD17E7C003614CB /* Controllers */,
 				C0FF0A151CD1725400633269 /* Main.storyboard */,
 				C0FF0A1B1CD1725400633269 /* Assets.xcassets */,
+				C02898B41CD17E91003614CB /* Views */,
 				C0FF0A1D1CD1725400633269 /* LaunchScreen.storyboard */,
 				C0FF0A201CD1725400633269 /* Info.plist */,
 				C0FF0A181CD1725400633269 /* PageTurner.xcdatamodeld */,
@@ -488,6 +512,7 @@
 				C0FF0A3B1CD1725400633269 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C0FF0A3C1CD1725400633269 /* Build configuration list for PBXNativeTarget "PageTurnerTests" */ = {
 			isa = XCConfigurationList;
@@ -496,6 +521,7 @@
 				C0FF0A3E1CD1725400633269 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C0FF0A3F1CD1725400633269 /* Build configuration list for PBXNativeTarget "PageTurnerUITests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +530,7 @@
 				C0FF0A411CD1725400633269 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
