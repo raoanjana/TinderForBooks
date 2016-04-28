@@ -7,161 +7,103 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C0FF0A121CD1725400633269 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0FF0A111CD1725400633269 /* AppDelegate.swift */; };
-		C0FF0A141CD1725400633269 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0FF0A131CD1725400633269 /* ViewController.swift */; };
-		C0FF0A171CD1725400633269 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0FF0A151CD1725400633269 /* Main.storyboard */; };
-		C0FF0A1A1CD1725400633269 /* PageTurner.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C0FF0A181CD1725400633269 /* PageTurner.xcdatamodeld */; };
-		C0FF0A1C1CD1725400633269 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0FF0A1B1CD1725400633269 /* Assets.xcassets */; };
-		C0FF0A1F1CD1725400633269 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0FF0A1D1CD1725400633269 /* LaunchScreen.storyboard */; };
-		C0FF0A2A1CD1725400633269 /* PageTurnerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0FF0A291CD1725400633269 /* PageTurnerTests.swift */; };
-		C0FF0A351CD1725400633269 /* PageTurnerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0FF0A341CD1725400633269 /* PageTurnerUITests.swift */; };
+		98173D258050F6B60073130F /* Pods_PageTurner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15C4C90D124D10FA70BEA8C7 /* Pods_PageTurner.framework */; };
+		C0C694E61CD1A17A0048BEE2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C694E51CD1A17A0048BEE2 /* AppDelegate.swift */; };
+		C0C694E81CD1A17A0048BEE2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C694E71CD1A17A0048BEE2 /* ViewController.swift */; };
+		C0C694EB1CD1A17A0048BEE2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0C694E91CD1A17A0048BEE2 /* Main.storyboard */; };
+		C0C694EE1CD1A17A0048BEE2 /* PageTurner.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C0C694EC1CD1A17A0048BEE2 /* PageTurner.xcdatamodeld */; };
+		C0C694F01CD1A17A0048BEE2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0C694EF1CD1A17A0048BEE2 /* Assets.xcassets */; };
+		C0C694F31CD1A17A0048BEE2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0C694F11CD1A17A0048BEE2 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		C0FF0A261CD1725400633269 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C0FF0A061CD1725300633269 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = C0FF0A0D1CD1725300633269;
-			remoteInfo = PageTurner;
-		};
-		C0FF0A311CD1725400633269 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C0FF0A061CD1725300633269 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = C0FF0A0D1CD1725300633269;
-			remoteInfo = PageTurner;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		C0FF0A0E1CD1725400633269 /* PageTurner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PageTurner.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		C0FF0A111CD1725400633269 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C0FF0A131CD1725400633269 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		C0FF0A161CD1725400633269 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		C0FF0A191CD1725400633269 /* PageTurner.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PageTurner.xcdatamodel; sourceTree = "<group>"; };
-		C0FF0A1B1CD1725400633269 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		C0FF0A1E1CD1725400633269 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		C0FF0A201CD1725400633269 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C0FF0A251CD1725400633269 /* PageTurnerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PageTurnerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C0FF0A291CD1725400633269 /* PageTurnerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageTurnerTests.swift; sourceTree = "<group>"; };
-		C0FF0A2B1CD1725400633269 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C0FF0A301CD1725400633269 /* PageTurnerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PageTurnerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C0FF0A341CD1725400633269 /* PageTurnerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageTurnerUITests.swift; sourceTree = "<group>"; };
-		C0FF0A361CD1725400633269 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0FB410B276B34AE9A117740A /* Pods-PageTurner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PageTurner.release.xcconfig"; path = "Pods/Target Support Files/Pods-PageTurner/Pods-PageTurner.release.xcconfig"; sourceTree = "<group>"; };
+		15C4C90D124D10FA70BEA8C7 /* Pods_PageTurner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PageTurner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0C694E21CD1A17A0048BEE2 /* PageTurner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PageTurner.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0C694E51CD1A17A0048BEE2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C0C694E71CD1A17A0048BEE2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C0C694EA1CD1A17A0048BEE2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C0C694ED1CD1A17A0048BEE2 /* PageTurner.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PageTurner.xcdatamodel; sourceTree = "<group>"; };
+		C0C694EF1CD1A17A0048BEE2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C0C694F21CD1A17A0048BEE2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C0C694F41CD1A17A0048BEE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C39E5AD3A51CE01D39857DC5 /* Pods-PageTurner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PageTurner.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PageTurner/Pods-PageTurner.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		C0FF0A0B1CD1725300633269 /* Frameworks */ = {
+		C0C694DF1CD1A17A0048BEE2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C0FF0A221CD1725400633269 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C0FF0A2D1CD1725400633269 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				98173D258050F6B60073130F /* Pods_PageTurner.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		C02898B31CD17E7C003614CB /* Controllers */ = {
+		81FD1691D6DE0C3725EFDF40 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				C0FF0A131CD1725400633269 /* ViewController.swift */,
+				C39E5AD3A51CE01D39857DC5 /* Pods-PageTurner.debug.xcconfig */,
+				0FB410B276B34AE9A117740A /* Pods-PageTurner.release.xcconfig */,
 			);
-			name = Controllers;
+			name = Pods;
 			sourceTree = "<group>";
 		};
-		C02898B41CD17E91003614CB /* Views */ = {
+		C0C694D91CD1A17A0048BEE2 = {
 			isa = PBXGroup;
 			children = (
-			);
-			name = Views;
-			sourceTree = "<group>";
-		};
-		C02898B51CD17EA2003614CB /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Models;
-			sourceTree = "<group>";
-		};
-		C0FF0A051CD1725300633269 = {
-			isa = PBXGroup;
-			children = (
-				C0FF0A101CD1725400633269 /* PageTurner */,
-				C0FF0A281CD1725400633269 /* PageTurnerTests */,
-				C0FF0A331CD1725400633269 /* PageTurnerUITests */,
-				C0FF0A0F1CD1725400633269 /* Products */,
+				C0C694E41CD1A17A0048BEE2 /* PageTurner */,
+				C0C694E31CD1A17A0048BEE2 /* Products */,
+				81FD1691D6DE0C3725EFDF40 /* Pods */,
+				F28D7DC1D1CD3F62E9880B74 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		C0FF0A0F1CD1725400633269 /* Products */ = {
+		C0C694E31CD1A17A0048BEE2 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C0FF0A0E1CD1725400633269 /* PageTurner.app */,
-				C0FF0A251CD1725400633269 /* PageTurnerTests.xctest */,
-				C0FF0A301CD1725400633269 /* PageTurnerUITests.xctest */,
+				C0C694E21CD1A17A0048BEE2 /* PageTurner.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		C0FF0A101CD1725400633269 /* PageTurner */ = {
+		C0C694E41CD1A17A0048BEE2 /* PageTurner */ = {
 			isa = PBXGroup;
 			children = (
-				C02898B51CD17EA2003614CB /* Models */,
-				C0FF0A111CD1725400633269 /* AppDelegate.swift */,
-				C02898B31CD17E7C003614CB /* Controllers */,
-				C0FF0A151CD1725400633269 /* Main.storyboard */,
-				C0FF0A1B1CD1725400633269 /* Assets.xcassets */,
-				C02898B41CD17E91003614CB /* Views */,
-				C0FF0A1D1CD1725400633269 /* LaunchScreen.storyboard */,
-				C0FF0A201CD1725400633269 /* Info.plist */,
-				C0FF0A181CD1725400633269 /* PageTurner.xcdatamodeld */,
+				C0C694E51CD1A17A0048BEE2 /* AppDelegate.swift */,
+				C0C694E71CD1A17A0048BEE2 /* ViewController.swift */,
+				C0C694E91CD1A17A0048BEE2 /* Main.storyboard */,
+				C0C694EF1CD1A17A0048BEE2 /* Assets.xcassets */,
+				C0C694F11CD1A17A0048BEE2 /* LaunchScreen.storyboard */,
+				C0C694F41CD1A17A0048BEE2 /* Info.plist */,
+				C0C694EC1CD1A17A0048BEE2 /* PageTurner.xcdatamodeld */,
 			);
 			path = PageTurner;
 			sourceTree = "<group>";
 		};
-		C0FF0A281CD1725400633269 /* PageTurnerTests */ = {
+		F28D7DC1D1CD3F62E9880B74 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C0FF0A291CD1725400633269 /* PageTurnerTests.swift */,
-				C0FF0A2B1CD1725400633269 /* Info.plist */,
+				15C4C90D124D10FA70BEA8C7 /* Pods_PageTurner.framework */,
 			);
-			path = PageTurnerTests;
-			sourceTree = "<group>";
-		};
-		C0FF0A331CD1725400633269 /* PageTurnerUITests */ = {
-			isa = PBXGroup;
-			children = (
-				C0FF0A341CD1725400633269 /* PageTurnerUITests.swift */,
-				C0FF0A361CD1725400633269 /* Info.plist */,
-			);
-			path = PageTurnerUITests;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		C0FF0A0D1CD1725300633269 /* PageTurner */ = {
+		C0C694E11CD1A17A0048BEE2 /* PageTurner */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C0FF0A391CD1725400633269 /* Build configuration list for PBXNativeTarget "PageTurner" */;
+			buildConfigurationList = C0C694F71CD1A17A0048BEE2 /* Build configuration list for PBXNativeTarget "PageTurner" */;
 			buildPhases = (
-				C0FF0A0A1CD1725300633269 /* Sources */,
-				C0FF0A0B1CD1725300633269 /* Frameworks */,
-				C0FF0A0C1CD1725300633269 /* Resources */,
+				E57EFE29DE36A6E693075040 /* Check Pods Manifest.lock */,
+				C0C694DE1CD1A17A0048BEE2 /* Sources */,
+				C0C694DF1CD1A17A0048BEE2 /* Frameworks */,
+				C0C694E01CD1A17A0048BEE2 /* Resources */,
+				4085841FC3D31B3602581833 /* Embed Pods Frameworks */,
+				2892B4E4C0B1071AF874E558 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -169,69 +111,25 @@
 			);
 			name = PageTurner;
 			productName = PageTurner;
-			productReference = C0FF0A0E1CD1725400633269 /* PageTurner.app */;
+			productReference = C0C694E21CD1A17A0048BEE2 /* PageTurner.app */;
 			productType = "com.apple.product-type.application";
-		};
-		C0FF0A241CD1725400633269 /* PageTurnerTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C0FF0A3C1CD1725400633269 /* Build configuration list for PBXNativeTarget "PageTurnerTests" */;
-			buildPhases = (
-				C0FF0A211CD1725400633269 /* Sources */,
-				C0FF0A221CD1725400633269 /* Frameworks */,
-				C0FF0A231CD1725400633269 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				C0FF0A271CD1725400633269 /* PBXTargetDependency */,
-			);
-			name = PageTurnerTests;
-			productName = PageTurnerTests;
-			productReference = C0FF0A251CD1725400633269 /* PageTurnerTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		C0FF0A2F1CD1725400633269 /* PageTurnerUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C0FF0A3F1CD1725400633269 /* Build configuration list for PBXNativeTarget "PageTurnerUITests" */;
-			buildPhases = (
-				C0FF0A2C1CD1725400633269 /* Sources */,
-				C0FF0A2D1CD1725400633269 /* Frameworks */,
-				C0FF0A2E1CD1725400633269 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				C0FF0A321CD1725400633269 /* PBXTargetDependency */,
-			);
-			name = PageTurnerUITests;
-			productName = PageTurnerUITests;
-			productReference = C0FF0A301CD1725400633269 /* PageTurnerUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		C0FF0A061CD1725300633269 /* Project object */ = {
+		C0C694DA1CD1A17A0048BEE2 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Hoot Industries";
 				TargetAttributes = {
-					C0FF0A0D1CD1725300633269 = {
+					C0C694E11CD1A17A0048BEE2 = {
 						CreatedOnToolsVersion = 7.2;
-					};
-					C0FF0A241CD1725400633269 = {
-						CreatedOnToolsVersion = 7.2;
-						TestTargetID = C0FF0A0D1CD1725300633269;
-					};
-					C0FF0A2F1CD1725400633269 = {
-						CreatedOnToolsVersion = 7.2;
-						TestTargetID = C0FF0A0D1CD1725300633269;
 					};
 				};
 			};
-			buildConfigurationList = C0FF0A091CD1725300633269 /* Build configuration list for PBXProject "PageTurner" */;
+			buildConfigurationList = C0C694DD1CD1A17A0048BEE2 /* Build configuration list for PBXProject "PageTurner" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -239,100 +137,103 @@
 				en,
 				Base,
 			);
-			mainGroup = C0FF0A051CD1725300633269;
-			productRefGroup = C0FF0A0F1CD1725400633269 /* Products */;
+			mainGroup = C0C694D91CD1A17A0048BEE2;
+			productRefGroup = C0C694E31CD1A17A0048BEE2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C0FF0A0D1CD1725300633269 /* PageTurner */,
-				C0FF0A241CD1725400633269 /* PageTurnerTests */,
-				C0FF0A2F1CD1725400633269 /* PageTurnerUITests */,
+				C0C694E11CD1A17A0048BEE2 /* PageTurner */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		C0FF0A0C1CD1725300633269 /* Resources */ = {
+		C0C694E01CD1A17A0048BEE2 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C0FF0A1F1CD1725400633269 /* LaunchScreen.storyboard in Resources */,
-				C0FF0A1C1CD1725400633269 /* Assets.xcassets in Resources */,
-				C0FF0A171CD1725400633269 /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C0FF0A231CD1725400633269 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C0FF0A2E1CD1725400633269 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				C0C694F31CD1A17A0048BEE2 /* LaunchScreen.storyboard in Resources */,
+				C0C694F01CD1A17A0048BEE2 /* Assets.xcassets in Resources */,
+				C0C694EB1CD1A17A0048BEE2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2892B4E4C0B1071AF874E558 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PageTurner/Pods-PageTurner-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4085841FC3D31B3602581833 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PageTurner/Pods-PageTurner-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E57EFE29DE36A6E693075040 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
-		C0FF0A0A1CD1725300633269 /* Sources */ = {
+		C0C694DE1CD1A17A0048BEE2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C0FF0A1A1CD1725400633269 /* PageTurner.xcdatamodeld in Sources */,
-				C0FF0A141CD1725400633269 /* ViewController.swift in Sources */,
-				C0FF0A121CD1725400633269 /* AppDelegate.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C0FF0A211CD1725400633269 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C0FF0A2A1CD1725400633269 /* PageTurnerTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C0FF0A2C1CD1725400633269 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C0FF0A351CD1725400633269 /* PageTurnerUITests.swift in Sources */,
+				C0C694EE1CD1A17A0048BEE2 /* PageTurner.xcdatamodeld in Sources */,
+				C0C694E81CD1A17A0048BEE2 /* ViewController.swift in Sources */,
+				C0C694E61CD1A17A0048BEE2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		C0FF0A271CD1725400633269 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = C0FF0A0D1CD1725300633269 /* PageTurner */;
-			targetProxy = C0FF0A261CD1725400633269 /* PBXContainerItemProxy */;
-		};
-		C0FF0A321CD1725400633269 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = C0FF0A0D1CD1725300633269 /* PageTurner */;
-			targetProxy = C0FF0A311CD1725400633269 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin PBXVariantGroup section */
-		C0FF0A151CD1725400633269 /* Main.storyboard */ = {
+		C0C694E91CD1A17A0048BEE2 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				C0FF0A161CD1725400633269 /* Base */,
+				C0C694EA1CD1A17A0048BEE2 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		C0FF0A1D1CD1725400633269 /* LaunchScreen.storyboard */ = {
+		C0C694F11CD1A17A0048BEE2 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				C0FF0A1E1CD1725400633269 /* Base */,
+				C0C694F21CD1A17A0048BEE2 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -340,7 +241,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		C0FF0A371CD1725400633269 /* Debug */ = {
+		C0C694F51CD1A17A0048BEE2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -385,7 +286,7 @@
 			};
 			name = Debug;
 		};
-		C0FF0A381CD1725400633269 /* Release */ = {
+		C0C694F61CD1A17A0048BEE2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -423,8 +324,9 @@
 			};
 			name = Release;
 		};
-		C0FF0A3A1CD1725400633269 /* Debug */ = {
+		C0C694F81CD1A17A0048BEE2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C39E5AD3A51CE01D39857DC5 /* Pods-PageTurner.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = PageTurner/Info.plist;
@@ -434,100 +336,35 @@
 			};
 			name = Debug;
 		};
-		C0FF0A3B1CD1725400633269 /* Release */ = {
+		C0C694F91CD1A17A0048BEE2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0FB410B276B34AE9A117740A /* Pods-PageTurner.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = PageTurner/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Hoot.PageTurner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
-		C0FF0A3D1CD1725400633269 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = PageTurnerTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Hoot.PageTurnerTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PageTurner.app/PageTurner";
-			};
-			name = Debug;
-		};
-		C0FF0A3E1CD1725400633269 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = PageTurnerTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Hoot.PageTurnerTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PageTurner.app/PageTurner";
-			};
-			name = Release;
-		};
-		C0FF0A401CD1725400633269 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = PageTurnerUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Hoot.PageTurnerUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = PageTurner;
-				USES_XCTRUNNER = YES;
-			};
-			name = Debug;
-		};
-		C0FF0A411CD1725400633269 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = PageTurnerUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Hoot.PageTurnerUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = PageTurner;
-				USES_XCTRUNNER = YES;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C0FF0A091CD1725300633269 /* Build configuration list for PBXProject "PageTurner" */ = {
+		C0C694DD1CD1A17A0048BEE2 /* Build configuration list for PBXProject "PageTurner" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C0FF0A371CD1725400633269 /* Debug */,
-				C0FF0A381CD1725400633269 /* Release */,
+				C0C694F51CD1A17A0048BEE2 /* Debug */,
+				C0C694F61CD1A17A0048BEE2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C0FF0A391CD1725400633269 /* Build configuration list for PBXNativeTarget "PageTurner" */ = {
+		C0C694F71CD1A17A0048BEE2 /* Build configuration list for PBXNativeTarget "PageTurner" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C0FF0A3A1CD1725400633269 /* Debug */,
-				C0FF0A3B1CD1725400633269 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		C0FF0A3C1CD1725400633269 /* Build configuration list for PBXNativeTarget "PageTurnerTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C0FF0A3D1CD1725400633269 /* Debug */,
-				C0FF0A3E1CD1725400633269 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		C0FF0A3F1CD1725400633269 /* Build configuration list for PBXNativeTarget "PageTurnerUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C0FF0A401CD1725400633269 /* Debug */,
-				C0FF0A411CD1725400633269 /* Release */,
+				C0C694F81CD1A17A0048BEE2 /* Debug */,
+				C0C694F91CD1A17A0048BEE2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -535,17 +372,17 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		C0FF0A181CD1725400633269 /* PageTurner.xcdatamodeld */ = {
+		C0C694EC1CD1A17A0048BEE2 /* PageTurner.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				C0FF0A191CD1725400633269 /* PageTurner.xcdatamodel */,
+				C0C694ED1CD1A17A0048BEE2 /* PageTurner.xcdatamodel */,
 			);
-			currentVersion = C0FF0A191CD1725400633269 /* PageTurner.xcdatamodel */;
+			currentVersion = C0C694ED1CD1A17A0048BEE2 /* PageTurner.xcdatamodel */;
 			path = PageTurner.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
 /* End XCVersionGroup section */
 	};
-	rootObject = C0FF0A061CD1725300633269 /* Project object */;
+	rootObject = C0C694DA1CD1A17A0048BEE2 /* Project object */;
 }
