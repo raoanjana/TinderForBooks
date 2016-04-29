@@ -1,0 +1,4 @@
+Flask==0.10.1
+Flask-API==0.6.5
+Flask-RESTful==0.3.5
+bottlenose==0.6.3
