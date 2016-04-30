@@ -18,7 +18,6 @@ def error_handler(err):
         return True
 
 def setup_product_api():
-    print("here")
     return bottlenose.Amazon(configs["aws_public_key"],
                              configs["aws_secret_key"],
                              configs["product_api_tag"],
