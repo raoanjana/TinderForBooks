@@ -92,7 +92,7 @@ def get_recommendations_from_asins(asins):
 
         # print(asin_node.text, ":", isbn_node.text, "\n" + author_node.text, ":", title_node.text, "\n" + description, "\n" + image_url, "\n")
 
-    return (json.dumps(books))
+    return books
 
 def remove_tags(text):
     return TAG_RE.sub('', text)
