@@ -26,7 +26,7 @@ def setup_product_api():
 
 def get_recommendations_from_asins(asins):
     productapi = setup_product_api()
-    root = ET.fromstring(productapi.SimilarityLookup(ItemId=asins, ResponseGroup="Images,EditorialReview,ItemAttributes",SimilarityType="Random"))
+    root = ET.fromstring(productapi.SimilarityLookup(ItemId=asins, ResponseGroup="Images,EditorialReview,ItemAttributes",SimilarityType="Random",SearchIndex="Books"))
     namespace = root.tag[root.tag.find("{"): root.tag.find("}")+1]
     item = root.find(namespace + "Items").find(namespace + "Item")
 
