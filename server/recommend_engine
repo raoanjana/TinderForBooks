@@ -1,0 +1,23 @@
+#!/usr/bin/env python
+import bottlenose, os.path, time, json
+from urllib2 import HTTPError
+
+# Load the AWS key information
+f = open(os.path.dirname(os.path.realpath(__file__)) + "/keys/aws_keys.json")
+configs = json.loads(f.read())
+
+def error_handler(err):
+    ex = err['exception']
+    if isinstance(ex, HTTPError) and ex.code == 503:
+        time.sleep(random.expovariate(0.1))
+        return True
+
+def setup_product_api():
+    return bottlenose.Amazon(configs["aws_public_key"],
+                             configs["aws_secret_key"],
+                             configs["product_api_tag"],
+                             ErrorHandler=error_handler,
+                             MaxQPS=0.9)
+
+if __name__ == '__main__':
+    setup_product_api()
