@@ -30,7 +30,7 @@ class Recommender(Resource):
         parser.add_argument('asin3', type=str, required=False)
         parser.add_argument('asin4', type=str, required=False)
         parser.add_argument('asin5', type=str, required=False)
-
+        args = parser.parse_args()
         return {
             'asin1' : args['asin1']
         }
