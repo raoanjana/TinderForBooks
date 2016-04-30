@@ -15,7 +15,18 @@ class Recommender(Resource):
         parser.add_argument('asin4', type=str, required=False)
         parser.add_argument('asin5', type=str, required=False)
         args = parser.parse_args()
-        return get_recommendations_from_asins(args['asin1'])
+
+        asins = args['asin1']
+        if args['asin2'] is not None:
+            asins += "," + args['asin2']
+        if args['asin3'] is not None:
+            asins += "," + args['asin3']
+        if args['asin4'] is not None:
+            asins += "," + args['asin4']
+        if args['asin5'] is not None:
+            asins += "," + args['asin5']
+
+        return get_recommendations_from_asins(asins)
 
 
 @app.route('/', methods=['GET'])
