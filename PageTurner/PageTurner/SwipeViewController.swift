@@ -13,17 +13,21 @@ class SwipeViewController: UIViewController, MDCSwipeToChooseDelegate{
     var books: [Book] = []
     let ChoosePersonButtonHorizontalPadding:CGFloat = 80.0
     let ChoosePersonButtonVerticalPadding:CGFloat = 20.0
+    
+    let recommender : Recommender = Recommender()
     var currentBook:Book!
     var frontCardView:ChooseBookView!
     var backCardView:ChooseBookView!
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        self.books = defaultBooks()
+        self.books = getInitialBooks()              // our problem here is that we cant just wait for updateBooks to finish since it tries to create cards before that happens
+        self.updateBooks()
     }
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-        self.books = defaultBooks()
+        self.books = getInitialBooks()
+        self.updateBooks()
         // Here you can init your properties
     }
     
@@ -78,16 +82,16 @@ class SwipeViewController: UIViewController, MDCSwipeToChooseDelegate{
                 self.backCardView.alpha = 1.0
                 },completion:nil)
         }
+        
+        // check if we need more cards
+        if (self.books.count < 3) {
+            self.updateBooks()
+        }
     }
 
-   
-    func defaultBooks()-> [Book]{
-        return [Book(title: "To Kill a Mockingbird", author: "Harper Lee", imageURL: "here is the url"), Book(title: "Harry Potter and the Chamber of Secrets", author: "JK Rowling", imageURL: "www.xyz")]
-    }
     func setMyFrontCardView(frontCardView:ChooseBookView) -> Void{
         
         // Keep track of the person currently being chosen.
-        // Quick and dirty, just for the purposes of this sample app.
         self.frontCardView = frontCardView
         self.currentBook = frontCardView.book
     }
@@ -146,5 +150,39 @@ class SwipeViewController: UIViewController, MDCSwipeToChooseDelegate{
     }
     func likeFrontCardView() -> Void{
         self.frontCardView.mdc_swipe(MDCSwipeDirection.Right)
+    }
+    
+    // We find new recommendations and append them to our books array
+    func updateBooks() {
+        recommender.getRandomRecommendations(false, completionHandler: {data, error -> Void in
+            if (error != nil) {
+                print ("ERROR")
+            } else {
+                guard let newBooks : [Book] = data else {
+                    return
+                }
+                // add all new books to our thing
+                for bookObject : Book in newBooks {
+                    self.books.append(bookObject)
+                }
+                
+                self.reloadView()
+            }
+        })
+    }
+    
+    func reloadView() {
+        self.view.setNeedsDisplay()
+    }
+    
+    
+    // TODO: We need to have this return either a set of "default books" or a set of saved recommendations?
+    // this is currently the solution to the problem of adding initial cards, if we only call updateBooks() then
+    // the method doesnt finish in time and we get a nil exception when it tries to create the first card
+    func getInitialBooks() -> [Book]{
+        books = [Book]()
+        books.append(Book(title: "Room", author: "Test author 1", imageURL: "www.xyz", summary: "the end", isbn: "111114441", asin: "10142978X"))
+        books.append(Book(title: "Lion King", author: "Disney", imageURL: "www.www", summary: "The start", isbn: "222444455", asin: "10914899X"))
+        return books
     }
 }
