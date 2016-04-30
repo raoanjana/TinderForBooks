@@ -1,5 +1,6 @@
 #!/usr/bin/env python
-import bottlenose, os.path, time, json, html
+import bottlenose, os.path, time, json
+from HTMLParser import HTMLParser
 from urllib2 import HTTPError
 # from urllib.error import HTTPError
 import xml.etree.ElementTree as ET
@@ -67,7 +68,8 @@ def get_recommendations_from_asins(asins):
                 description = review
 
         # get rid of weird formatting in amazon reviews
-        description = html.unescape(description)
+        h = HTMLParser()
+        description = h.unescape(description)
         description = remove_tags(description)
 
         # we dont want any errors so just skip bad xml responses
