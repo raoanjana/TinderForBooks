@@ -7,8 +7,8 @@
 //
 
 import UIKit
-import Alamofire
 import MDCSwipeToChoose
+import Alamofire
 
 
 class ViewController: UIViewController {

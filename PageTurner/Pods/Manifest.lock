@@ -1,0 +1,13 @@
+PODS:
+  - Alamofire (2.0.2)
+  - MDCSwipeToChoose (0.2.3)
+
+DEPENDENCIES:
+  - Alamofire (~> 2.0)
+  - MDCSwipeToChoose
+
+SPEC CHECKSUMS:
+  Alamofire: 8edbab00802a752bb5240cc2abe70e7e881488ad
+  MDCSwipeToChoose: 56239d98b4558c66e7c3c9069482befd26092270
+
+COCOAPODS: 0.39.0

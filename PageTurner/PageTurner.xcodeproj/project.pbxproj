@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7EBAA13F1CD40F3300326E9C /* SwipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBAA13E1CD40F3300326E9C /* SwipeViewController.swift */; };
+		7EBAA1411CD41CBF00326E9C /* ChooseBookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBAA1401CD41CBF00326E9C /* ChooseBookView.swift */; };
+		7EBAA1431CD41F1B00326E9C /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBAA1421CD41F1B00326E9C /* Book.swift */; };
 		98173D258050F6B60073130F /* Pods_PageTurner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15C4C90D124D10FA70BEA8C7 /* Pods_PageTurner.framework */; };
 		C0C694E61CD1A17A0048BEE2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C694E51CD1A17A0048BEE2 /* AppDelegate.swift */; };
-		C0C694E81CD1A17A0048BEE2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C694E71CD1A17A0048BEE2 /* ViewController.swift */; };
 		C0C694EB1CD1A17A0048BEE2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0C694E91CD1A17A0048BEE2 /* Main.storyboard */; };
 		C0C694EE1CD1A17A0048BEE2 /* PageTurner.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C0C694EC1CD1A17A0048BEE2 /* PageTurner.xcdatamodeld */; };
 		C0C694F01CD1A17A0048BEE2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0C694EF1CD1A17A0048BEE2 /* Assets.xcassets */; };
@@ -19,9 +21,12 @@
 /* Begin PBXFileReference section */
 		0FB410B276B34AE9A117740A /* Pods-PageTurner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PageTurner.release.xcconfig"; path = "Pods/Target Support Files/Pods-PageTurner/Pods-PageTurner.release.xcconfig"; sourceTree = "<group>"; };
 		15C4C90D124D10FA70BEA8C7 /* Pods_PageTurner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PageTurner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7EBAA13D1CD40C2F00326E9C /* BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
+		7EBAA13E1CD40F3300326E9C /* SwipeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeViewController.swift; sourceTree = "<group>"; };
+		7EBAA1401CD41CBF00326E9C /* ChooseBookView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseBookView.swift; sourceTree = "<group>"; };
+		7EBAA1421CD41F1B00326E9C /* Book.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		C0C694E21CD1A17A0048BEE2 /* PageTurner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PageTurner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0C694E51CD1A17A0048BEE2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C0C694E71CD1A17A0048BEE2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C0C694EA1CD1A17A0048BEE2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C0C694ED1CD1A17A0048BEE2 /* PageTurner.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PageTurner.xcdatamodel; sourceTree = "<group>"; };
 		C0C694EF1CD1A17A0048BEE2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -42,6 +47,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7E6E043E1CD52ED9002EE66A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7EBAA1421CD41F1B00326E9C /* Book.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		7E6E043F1CD52EEC002EE66A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7EBAA1401CD41CBF00326E9C /* ChooseBookView.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		7E6E04401CD52EFC002EE66A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				7EBAA13E1CD40F3300326E9C /* SwipeViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		7E6E04411CD530CC002EE66A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		81FD1691D6DE0C3725EFDF40 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -72,13 +108,17 @@
 		C0C694E41CD1A17A0048BEE2 /* PageTurner */ = {
 			isa = PBXGroup;
 			children = (
+				7E6E04411CD530CC002EE66A /* Supporting Files */,
+				7E6E04401CD52EFC002EE66A /* Controllers */,
+				7E6E043F1CD52EEC002EE66A /* Views */,
+				7E6E043E1CD52ED9002EE66A /* Models */,
 				C0C694E51CD1A17A0048BEE2 /* AppDelegate.swift */,
-				C0C694E71CD1A17A0048BEE2 /* ViewController.swift */,
 				C0C694E91CD1A17A0048BEE2 /* Main.storyboard */,
 				C0C694EF1CD1A17A0048BEE2 /* Assets.xcassets */,
 				C0C694F11CD1A17A0048BEE2 /* LaunchScreen.storyboard */,
 				C0C694F41CD1A17A0048BEE2 /* Info.plist */,
 				C0C694EC1CD1A17A0048BEE2 /* PageTurner.xcdatamodeld */,
+				7EBAA13D1CD40C2F00326E9C /* BridgingHeader.h */,
 			);
 			path = PageTurner;
 			sourceTree = "<group>";
@@ -214,8 +254,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				C0C694EE1CD1A17A0048BEE2 /* PageTurner.xcdatamodeld in Sources */,
-				C0C694E81CD1A17A0048BEE2 /* ViewController.swift in Sources */,
+				7EBAA1431CD41F1B00326E9C /* Book.swift in Sources */,
 				C0C694E61CD1A17A0048BEE2 /* AppDelegate.swift in Sources */,
+				7EBAA1411CD41CBF00326E9C /* ChooseBookView.swift in Sources */,
+				7EBAA13F1CD40F3300326E9C /* SwipeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,6 +375,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Hoot.PageTurner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = PageTurner/BridgingHeader.h;
+				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = PageTurner/BridgingHeader.h;
 			};
 			name = Debug;
 		};
@@ -345,6 +389,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Hoot.PageTurner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = PageTurner/BridgingHeader.h;
+				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = PageTurner/BridgingHeader.h;
 			};
 			name = Release;
 		};
