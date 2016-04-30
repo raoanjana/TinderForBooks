@@ -22,13 +22,25 @@ api = Api(app)
 #             'sentic_values': sentic_values,
 #             'compound_emotions': compound_emotions
 #         }
+class Recommender(Resource):
+    def get(self):
+        parser = reqparse.RequestParser()
+        parser.add_argument('asin1', type=str, required=True)
+        parser.add_argument('asin2', type=str, required=False)
+        parser.add_argument('asin3', type=str, required=False)
+        parser.add_argument('asin4', type=str, required=False)
+        parser.add_argument('asin5', type=str, required=False)
+
+        return {
+            'asin1' : args['asin1']
+        }
 
 
 @app.route('/', methods=['GET'])
 def index():
     return 'You are being greeted by pageturner!'
 
-# api.add_resource(MultimediaAPI, '/search', endpoint='search')
+api.add_resource(Recommender, '/recommend', endpoint='recommend')
 # api.add_resource(EmotionAPI, '/emotions', endpoint='emotions')
 
 if __name__ == '__main__':
