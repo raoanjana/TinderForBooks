@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 import bottlenose, os.path, time, json, html
-# from urllib2 import HTTPError
-from urllib.error import HTTPError
+from urllib2 import HTTPError
+# from urllib.error import HTTPError
 import xml.etree.ElementTree as ET
 import re
 
