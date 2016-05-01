@@ -16,14 +16,16 @@ class Book: NSObject{
     let summary : NSString
     let isbn : NSString
     let asin :NSString
+    let instruction : Bool
     
-    init(title: NSString?, author: NSString?, imageURL: NSString?, summary: NSString?, isbn : NSString, asin : NSString){
+    init(title: NSString?, author: NSString?, imageURL: NSString?, summary: NSString?, isbn : NSString, asin : NSString, instruction : Bool){
         self.title = title ?? ""
         self.author = author ?? ""
         self.imageURL = imageURL ?? ""
         self.summary = summary ?? ""
         self.isbn = isbn ?? ""
         self.asin = asin ?? ""
+        self.instruction = instruction
     }
     
 }

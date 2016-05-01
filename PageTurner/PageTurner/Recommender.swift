@@ -20,7 +20,7 @@ struct APIConfig {
 
 class Recommender {
     func getRandomRecommendations(first : Bool, completionHandler: (([Book]?, NSError?) -> Void)!) -> Void {
-        let query = APIConfig.baseURL + APIConfig.endpoint + "?" + APIConfig.b1 + "=" + "059035342X"
+        let query = APIConfig.baseURL + APIConfig.endpoint + "?" + APIConfig.b1 + "=" + "059035342X" + "&" + APIConfig.b2 + "=015216250X"
         
         let url: NSURL = NSURL(string: query.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!)!
         let sessionConfiguartion: NSURLSessionConfiguration = NSURLSessionConfiguration.defaultSessionConfiguration()
@@ -71,7 +71,7 @@ class Recommender {
                         continue
                     }
                 
-                    bookArray.append(Book(title: title, author: author, imageURL: image_url, summary: description, isbn: isbn, asin: asin))
+                    bookArray.append(Book(title: title, author: author, imageURL: image_url, summary: description, isbn: isbn, asin: asin, instruction: false))
                 }
             }
             return bookArray
