@@ -11,20 +11,26 @@ import UIKit
 import MDCSwipeToChoose
 
 class ChooseBookView: MDCSwipeToChooseView {
-    let ChoosBookViewImageLabelWidth:CGFloat = 42.0
+    let ChooseBookViewImageLabelWidth:CGFloat = 42.0
     var book: Book!
     var titleLabel: UILabel!
     var informationView: UIView!
+    var image: UIImageView!
     
     init(frame: CGRect, book: Book, options: MDCSwipeToChooseViewOptions){
         super.init(frame: frame, options: options)
         self.book = book
-        
+        let imageURL = self.book.imageURL
+        let url = NSURL(string: imageURL as String)
+        //initoalizes imageview
+        downloadImage(url!)
+        //self.imageView.image = image
         self.autoresizingMask = [UIViewAutoresizing.FlexibleHeight, UIViewAutoresizing.FlexibleWidth]
         UIViewAutoresizing.FlexibleBottomMargin
         
-        //self.imageView.autoresizingMask = self.autoresizingMask
+        self.imageView.autoresizingMask = self.autoresizingMask
         constructInformationView()
+        //constructSummaryView()
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -46,17 +52,42 @@ class ChooseBookView: MDCSwipeToChooseView {
         
     }
     func constructNameLabel() -> Void{
-        func constructNameLabel() -> Void{
-            let leftPadding:CGFloat = 12.0
-            let topPadding:CGFloat = 17.0
-            let frame:CGRect = CGRectMake(leftPadding,
-                topPadding,
-                floor(CGRectGetWidth(self.informationView.frame)/2),
-                CGRectGetHeight(self.informationView.frame) - topPadding)
-            self.titleLabel = UILabel(frame:frame)
-            self.titleLabel.text = "\(book.title)"
-            self.informationView.addSubview(self.titleLabel)
+        let leftPadding:CGFloat = 12.0
+        let topPadding:CGFloat = 17.0
+        let frame:CGRect = CGRectMake(leftPadding,
+            topPadding,
+            floor(CGRectGetWidth(self.informationView.frame)),
+            CGRectGetHeight(self.informationView.frame) - topPadding)
+        self.titleLabel = UILabel(frame:frame)
+        self.titleLabel.text = "\(book.title)"
+        self.titleLabel.font = titleLabel.font.fontWithSize(10)
+        self.informationView.addSubview(self.titleLabel)
+    }
+    func buildImageLabelViewLeftOf(x:CGFloat, imageURL: NSURL, text:String) -> ImageView{
+        let frame:CGRect = CGRect(x:x-ChooseBookViewImageLabelWidth, y: 0,
+            width: ChooseBookViewImageLabelWidth,
+            height: CGRectGetHeight(self.informationView.bounds))
+        let view:ImageView = ImageView(frame:frame, imageURL: imageURL)
+        view.autoresizingMask = UIViewAutoresizing.FlexibleLeftMargin
+        return view
+    }
+    func getData(url:NSURL, completion: ((data: NSData?, response: NSURLResponse?, error: NSError? ) -> Void)) {
+        NSURLSession.sharedSession().dataTaskWithURL(url) { (data, response, error) in
+            completion(data: data, response: response, error: error)
+            }.resume()
+    }
+    
+    func downloadImage(url: NSURL){
+        getData(url) { (data, response, error)  in
+            dispatch_async(dispatch_get_main_queue()) { () -> Void in
+                guard let data = data where error == nil else {
+                    // Something went wrong getting the image out
+                    self.imageView.image = UIImage(named: "NoImage.png")
+                    return
+                }
+                let imageTest = UIImage(data: data)
+                self.imageView.image = imageTest
+            }
         }
     }
-
 }

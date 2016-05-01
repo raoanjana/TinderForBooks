@@ -82,7 +82,7 @@ class SwipeViewController: UIViewController, MDCSwipeToChooseDelegate{
 
    
     func defaultBooks()-> [Book]{
-        return [Book(title: "To Kill a Mockingbird", author: "Harper Lee", imageURL: "here is the url"), Book(title: "Harry Potter and the Chamber of Secrets", author: "JK Rowling", imageURL: "www.xyz")]
+        return [Book(title: "To Kill a Mockingbird", author: "Harper Lee", imageURL: "http://a5.mzstatic.com/us/r30/Publication1/v4/fb/e1/37/fbe137b5-82b5-33ec-b63d-1101594519c8/cover225x225.jpeg"), Book(title: "Harry Potter and the Chamber of Secrets", author: "JK Rowling", imageURL: "http://bookriotcom.c.presscdn.com/wp-content/uploads/2014/08/HP_hc_old_2.jpg")]
     }
     func setMyFrontCardView(frontCardView:ChooseBookView) -> Void{
         
