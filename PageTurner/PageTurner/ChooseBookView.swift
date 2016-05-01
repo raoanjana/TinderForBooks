@@ -63,14 +63,7 @@ class ChooseBookView: MDCSwipeToChooseView {
         self.titleLabel.font = titleLabel.font.fontWithSize(10)
         self.informationView.addSubview(self.titleLabel)
     }
-    func buildImageLabelViewLeftOf(x:CGFloat, imageURL: NSURL, text:String) -> ImageView{
-        let frame:CGRect = CGRect(x:x-ChooseBookViewImageLabelWidth, y: 0,
-            width: ChooseBookViewImageLabelWidth,
-            height: CGRectGetHeight(self.informationView.bounds))
-        let view:ImageView = ImageView(frame:frame, imageURL: imageURL)
-        view.autoresizingMask = UIViewAutoresizing.FlexibleLeftMargin
-        return view
-    }
+
     func getData(url:NSURL, completion: ((data: NSData?, response: NSURLResponse?, error: NSError? ) -> Void)) {
         NSURLSession.sharedSession().dataTaskWithURL(url) { (data, response, error) in
             completion(data: data, response: response, error: error)
