@@ -8,6 +8,7 @@
 
 import Foundation
 import MDCSwipeToChoose
+import CoreData
 
 class SwipeViewController: UIViewController, MDCSwipeToChooseDelegate{
     var books: [Book] = []
@@ -38,14 +39,12 @@ class SwipeViewController: UIViewController, MDCSwipeToChooseDelegate{
         
         self.backCardView = self.popPersonViewWithFrame(backCardViewFrame())!
         self.view.insertSubview(self.backCardView, belowSubview: self.frontCardView)
-        
-        constructLikedButton()
-        constructNopeButton()
-        
     }
+    
     func suportedInterfaceOrientations() -> UIInterfaceOrientationMask{
         return UIInterfaceOrientationMask.Portrait
     }
+    
     func viewDidCancelSwipe(view: UIView) -> Void{
         
         print("You couldn't decide on \(self.currentBook.title)");
@@ -60,8 +59,8 @@ class SwipeViewController: UIViewController, MDCSwipeToChooseDelegate{
             print("You noped: \(self.currentBook.title)")
         }
         else{
-            
             print("You liked: \(self.currentBook.title)")
+            self.saveBook(self.currentBook)
         }
         
         // MDCSwipeToChooseView removes the view from the view hierarchy
@@ -104,10 +103,6 @@ class SwipeViewController: UIViewController, MDCSwipeToChooseDelegate{
             return nil;
         }
         
-        // UIView+MDCSwipeToChoose and MDCSwipeToChooseView are heavily customizable.
-        // Each take an "options" argument. Here, we specify the view controller as
-        // a delegate, and provide a custom callback that moves the back card view
-        // based on how far the user has panned the front card view.
         let options:MDCSwipeToChooseViewOptions = MDCSwipeToChooseViewOptions()
         options.delegate = self
         //options.threshold = 160.0
@@ -131,26 +126,18 @@ class SwipeViewController: UIViewController, MDCSwipeToChooseDelegate{
         let bottomPadding:CGFloat = 300.0
         return CGRectMake(horizontalPadding,topPadding,CGRectGetWidth(self.view.frame) - (horizontalPadding * 2), CGRectGetHeight(self.view.frame) - bottomPadding)
     }
+    
     func backCardViewFrame() ->CGRect{
         let frontFrame:CGRect = frontCardViewFrame()
         return CGRectMake(frontFrame.origin.x, frontFrame.origin.y + 10.0, CGRectGetWidth(frontFrame), CGRectGetHeight(frontFrame))
 
     }
-    func constructLikedButton() -> Void{
-        let button: UIButton = UIButton(type: UIButtonType.System)
-        //add size and image link
-        button.addTarget(self, action: "likeFrontCardView", forControlEvents: UIControlEvents.TouchUpInside)
-        self.view.addSubview(button)
-    }
-    func constructNopeButton() -> Void{
-        let button:UIButton =  UIButton(type: UIButtonType.System)
-        //add size adn image link here
-        button.addTarget(self, action: "nopeFrontCardView", forControlEvents: UIControlEvents.TouchUpInside)
-        self.view.addSubview(button)
-    }
+    
+    
     func nopeFrontCardView() -> Void{
         self.frontCardView.mdc_swipe(MDCSwipeDirection.Left)
     }
+    
     func likeFrontCardView() -> Void{
         self.frontCardView.mdc_swipe(MDCSwipeDirection.Right)
     }
@@ -187,5 +174,28 @@ class SwipeViewController: UIViewController, MDCSwipeToChooseDelegate{
         books.append(Book(title: "Welcome to PageTurner!", author: "Test author 1", imageURL: "www.xyz", summary: "the end", isbn: "111114441", asin: "10142978X"))
         books.append(Book(title: "Welcome to PageTurner!", author: "Test author 1", imageURL: "www.xyz", summary: "the end", isbn: "111114441", asin: "10142978X"))
         return books
+    }
+    
+    // save the book to core data
+    func saveBook(book : Book){
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let managedContext = appDelegate.managedObjectContext
+        
+        let entity = NSEntityDescription.entityForName("LikedBook", inManagedObjectContext: managedContext)
+        let bookToSave = NSManagedObject(entity: entity!, insertIntoManagedObjectContext: managedContext)
+        
+        bookToSave.setValue(book.title as String, forKey: "title")
+        bookToSave.setValue(book.isbn as String, forKey: "isbn")
+        bookToSave.setValue(book.asin as String, forKey: "asin")
+        bookToSave.setValue(book.imageURL as String, forKey: "image_url")
+        bookToSave.setValue(book.summary as String, forKey: "summary")
+        bookToSave.setValue(book.author as String, forKey: "author")
+        
+        do {
+            try managedContext.save()
+//            likedBooks.append(bookToSave)
+        } catch let error as NSError  {
+            print("Could not save \(error), \(error.userInfo)")
+        }
     }
 }
