@@ -1,15 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<<<<<<< HEAD
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="jQX-ot-LoL">
-=======
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="CcL-Ox-ve6">
->>>>>>> fa3296be32f7fdb4cb60b5e2cbe90068e29a748d
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--Swipe View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="SwipeViewController" customModule="PageTurner" customModuleProvider="target" sceneMemberID="viewController">
@@ -34,7 +30,6 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="nEI-n3-xjY" secondAttribute="bottom" constant="29" id="sgu-an-TDB"/>
                         </constraints>
                     </view>
-<<<<<<< HEAD
                     <tabBarItem key="tabBarItem" systemItem="more" id="h9Z-P2-XW2"/>
                     <connections>
                         <outlet property="descriptionField" destination="nEI-n3-xjY" id="62g-by-zKg"/>
@@ -45,15 +40,6 @@
             <point key="canvasLocation" x="3044" y="340"/>
         </scene>
         <!--Liked Books Controller-->
-=======
-                    <tabBarItem key="tabBarItem" title="Item" id="h9Z-P2-XW2"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2232" y="340"/>
-        </scene>
-        <!--Item-->
->>>>>>> fa3296be32f7fdb4cb60b5e2cbe90068e29a748d
         <scene sceneID="gGu-gm-7FL">
             <objects>
                 <tableViewController id="oZR-wF-bEn" customClass="LikedBooksController" customModule="PageTurner" customModuleProvider="target" sceneMemberID="viewController">
@@ -85,7 +71,6 @@
                             <outlet property="delegate" destination="oZR-wF-bEn" id="SR3-zT-Fcu"/>
                         </connections>
                     </tableView>
-<<<<<<< HEAD
                     <tabBarItem key="tabBarItem" systemItem="favorites" id="oEo-s1-1qe"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J7z-Jv-LTN" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -98,25 +83,10 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="jQX-ot-LoL" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="Jqt-ot-4eF">
-=======
-                    <tabBarItem key="tabBarItem" title="Item" id="oEo-s1-1qe"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="J7z-Jv-LTN" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2232" y="1057"/>
-        </scene>
-        <!--Tab Bar Controller-->
-        <scene sceneID="Z7I-sz-Tft">
-            <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="CcL-Ox-ve6" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="t4H-jU-r7V">
->>>>>>> fa3296be32f7fdb4cb60b5e2cbe90068e29a748d
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-<<<<<<< HEAD
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="zgc-CQ-KvM"/>
                         <segue destination="oZR-wF-bEn" kind="relationship" relationship="viewControllers" id="Mwl-L3-bl6"/>
                     </connections>
@@ -124,15 +94,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aVf-qG-sCu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2232" y="340"/>
-=======
-                        <segue destination="oZR-wF-bEn" kind="relationship" relationship="viewControllers" id="Two-BN-LBo"/>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="2tb-rb-uI7"/>
-                    </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ncv-V7-5XX" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1034" y="721"/>
->>>>>>> fa3296be32f7fdb4cb60b5e2cbe90068e29a748d
         </scene>
     </scenes>
 </document>
