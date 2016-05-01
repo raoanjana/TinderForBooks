@@ -11,9 +11,9 @@ import MDCSwipeToChoose
 
 class SwipeViewController: UIViewController, MDCSwipeToChooseDelegate{
     var books: [Book] = []
-    let ChoosePersonButtonHorizontalPadding:CGFloat = 80.0
-    let ChoosePersonButtonVerticalPadding:CGFloat = 20.0
     
+    
+    @IBOutlet weak var descriptionField: UITextView!
     let recommender : Recommender = Recommender()
     var currentBook:Book!
     var frontCardView:ChooseBookView!
@@ -90,15 +90,14 @@ class SwipeViewController: UIViewController, MDCSwipeToChooseDelegate{
     }
 
    
-    func defaultBooks()-> [Book]{
-        return [Book(title: "To Kill a Mockingbird", author: "Harper Lee", imageURL: "http://a5.mzstatic.com/us/r30/Publication1/v4/fb/e1/37/fbe137b5-82b5-33ec-b63d-1101594519c8/cover225x225.jpeg", summary: "", isbn: "", asin: ""), Book(title: "Harry Potter and the Chamber of Secrets", author: "JK Rowling", imageURL: "http://bookriotcom.c.presscdn.com/wp-content/uploads/2014/08/HP_hc_old_2.jpg", summary: "", isbn: "", asin: "")]
-    }
 
     func setMyFrontCardView(frontCardView:ChooseBookView) -> Void{
         
         // Keep track of the person currently being chosen.
         self.frontCardView = frontCardView
         self.currentBook = frontCardView.book
+        descriptionField.font = descriptionField.font?.fontWithSize(15)
+        descriptionField.text = currentBook.summary as String
     }
 
     func popPersonViewWithFrame(frame:CGRect) -> ChooseBookView?{
@@ -130,7 +129,7 @@ class SwipeViewController: UIViewController, MDCSwipeToChooseDelegate{
     func frontCardViewFrame() -> CGRect{
         let horizontalPadding:CGFloat = 20.0
         let topPadding:CGFloat = 60.0
-        let bottomPadding:CGFloat = 200.0
+        let bottomPadding:CGFloat = 300.0
         return CGRectMake(horizontalPadding,topPadding,CGRectGetWidth(self.view.frame) - (horizontalPadding * 2), CGRectGetHeight(self.view.frame) - bottomPadding)
     }
     func backCardViewFrame() ->CGRect{

@@ -16,8 +16,23 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="bottom" ambiguous="YES" misplaced="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="nEI-n3-xjY">
+                                <rect key="frame" x="33" y="443" width="355" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="nEI-n3-xjY" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="480" id="Nov-pv-eHR"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="nEI-n3-xjY" secondAttribute="bottom" constant="29" id="sgu-an-TDB"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="descriptionField" destination="nEI-n3-xjY" id="62g-by-zKg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
