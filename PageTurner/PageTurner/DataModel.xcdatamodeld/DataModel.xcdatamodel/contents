@@ -9,6 +9,10 @@
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
+<<<<<<< HEAD
         <element name="LikedBook" positionX="-63" positionY="-18" width="128" height="135"/>
+=======
+        <element name="LikedBook" positionX="-36" positionY="9" width="128" height="135"/>
+>>>>>>> fa3296be32f7fdb4cb60b5e2cbe90068e29a748d
     </elements>
 </model>
