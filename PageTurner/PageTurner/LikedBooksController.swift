@@ -22,13 +22,12 @@ class LikedBooksController : UITableViewController {
     
     override func viewDidLoad() {
         print("loaded")
-//        self.saveBook(Book(title: "Welcome to PageTurner!", author: "Test author 1", imageURL: "www.xyz", summary: "the end", isbn: "111114441", asin: "10142978X"))
-//        self.saveBook(Book(title: "Instructions", author: "huck fin 1", imageURL: "www.xyz", summary: "the beginnimng", isbn: "111413441", asin: "ASaSFA334"))
         super.viewDidLoad()
     }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+        
         
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         
@@ -39,6 +38,7 @@ class LikedBooksController : UITableViewController {
         do {
             let results = try managedContext.executeFetchRequest(fetchRequest)
             likedBooks = results as! [NSManagedObject]
+            self.tableView.reloadData()
             
         } catch let error as NSError {
             print("Could not fetch \(error), \(error.userInfo)")

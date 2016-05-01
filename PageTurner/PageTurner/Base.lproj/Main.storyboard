@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="oZR-wF-bEn">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="jQX-ot-LoL">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--Swipe View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="SwipeViewController" customModule="PageTurner" customModuleProvider="target" sceneMemberID="viewController">
@@ -17,8 +17,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="bottom" ambiguous="YES" misplaced="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="nEI-n3-xjY">
-                                <rect key="frame" x="33" y="443" width="355" height="128"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="bottom" ambiguous="YES" misplaced="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="nEI-n3-xjY">
+                                <rect key="frame" x="33" y="451" width="356" height="129"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -30,16 +30,16 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="nEI-n3-xjY" secondAttribute="bottom" constant="29" id="sgu-an-TDB"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="h9Z-P2-XW2"/>
+                    <tabBarItem key="tabBarItem" systemItem="more" id="h9Z-P2-XW2"/>
                     <connections>
                         <outlet property="descriptionField" destination="nEI-n3-xjY" id="62g-by-zKg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2232" y="340"/>
+            <point key="canvasLocation" x="3044" y="340"/>
         </scene>
-        <!--Item-->
+        <!--Liked Books Controller-->
         <scene sceneID="gGu-gm-7FL">
             <objects>
                 <tableViewController id="oZR-wF-bEn" customClass="LikedBooksController" customModule="PageTurner" customModuleProvider="target" sceneMemberID="viewController">
@@ -71,11 +71,29 @@
                             <outlet property="delegate" destination="oZR-wF-bEn" id="SR3-zT-Fcu"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Item" id="oEo-s1-1qe"/>
+                    <tabBarItem key="tabBarItem" systemItem="favorites" id="oEo-s1-1qe"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J7z-Jv-LTN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2232" y="1057"/>
+            <point key="canvasLocation" x="2855" y="1072"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="hoU-1N-gHI">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="jQX-ot-LoL" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="Jqt-ot-4eF">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="zgc-CQ-KvM"/>
+                        <segue destination="oZR-wF-bEn" kind="relationship" relationship="viewControllers" id="Mwl-L3-bl6"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aVf-qG-sCu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2232" y="340"/>
         </scene>
     </scenes>
 </document>

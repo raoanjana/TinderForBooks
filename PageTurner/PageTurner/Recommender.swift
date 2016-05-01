@@ -71,7 +71,7 @@ class Recommender {
                         continue
                     }
                 
-                    bookArray.append(Book(title: title, author: author, imageURL: image_url, summary: description, isbn: isbn, asin: asin))
+                    bookArray.append(Book(title: title, author: author, imageURL: image_url, summary: description, isbn: isbn, asin: asin, instruction: false))
                 }
             }
             return bookArray
