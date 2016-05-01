@@ -181,8 +181,7 @@ class SwipeViewController: UIViewController, MDCSwipeToChooseDelegate{
     // the method doesnt finish in time and we get a nil exception when it tries to create the first card
     func getInitialBooks() -> [Book]{
         books = [Book]()
-        books.append(Book(title: "Room", author: "Test author 1", imageURL: "www.xyz", summary: "the end", isbn: "111114441", asin: "10142978X"))
-        books.append(Book(title: "Lion King", author: "Disney", imageURL: "www.www", summary: "The start", isbn: "222444455", asin: "10914899X"))
+        books.append(Book(title: "Welcome to PageTurner!", author: "Test author 1", imageURL: "www.xyz", summary: "the end", isbn: "111114441", asin: "10142978X"))
         return books
     }
 }
