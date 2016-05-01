@@ -89,11 +89,6 @@ class SwipeViewController: UIViewController, MDCSwipeToChooseDelegate{
         }
     }
 
-   
-    func defaultBooks()-> [Book]{
-        return [Book(title: "To Kill a Mockingbird", author: "Harper Lee", imageURL: "http://a5.mzstatic.com/us/r30/Publication1/v4/fb/e1/37/fbe137b5-82b5-33ec-b63d-1101594519c8/cover225x225.jpeg", summary: "", isbn: "", asin: ""), Book(title: "Harry Potter and the Chamber of Secrets", author: "JK Rowling", imageURL: "http://bookriotcom.c.presscdn.com/wp-content/uploads/2014/08/HP_hc_old_2.jpg", summary: "", isbn: "", asin: "")]
-    }
-
     func setMyFrontCardView(frontCardView:ChooseBookView) -> Void{
         
         // Keep track of the person currently being chosen.
@@ -186,6 +181,7 @@ class SwipeViewController: UIViewController, MDCSwipeToChooseDelegate{
     // the method doesnt finish in time and we get a nil exception when it tries to create the first card
     func getInitialBooks() -> [Book]{
         books = [Book]()
+        books.append(Book(title: "Welcome to PageTurner!", author: "Test author 1", imageURL: "www.xyz", summary: "the end", isbn: "111114441", asin: "10142978X"))
         books.append(Book(title: "Welcome to PageTurner!", author: "Test author 1", imageURL: "www.xyz", summary: "the end", isbn: "111114441", asin: "10142978X"))
         return books
     }
