@@ -21,9 +21,12 @@ class ChooseBookView: MDCSwipeToChooseView {
         super.init(frame: frame, options: options)
         self.book = book
         let imageURL = self.book.imageURL
+        self.imageView.contentMode = UIViewContentMode.ScaleAspectFit
+        self.imageView.backgroundColor = UIColor.whiteColor()
         if imageURL == ""{
             self.imageView.image = UIImage(named: "InstructionCard.jpg")
         }
+            
         else{
             let url = NSURL(string: imageURL as String)
             //initoalizes imageview
@@ -43,6 +46,7 @@ class ChooseBookView: MDCSwipeToChooseView {
         super.init(coder: aDecoder)!
         //fatalError("init(coder:) has not been implemented")
     }
+    
     func constructInformationView() -> Void{
         let bottomHeight:CGFloat = 60.0
         let bottomFrame:CGRect = CGRectMake(0,
@@ -57,6 +61,7 @@ class ChooseBookView: MDCSwipeToChooseView {
         constructNameLabel()
         
     }
+    
     func constructNameLabel() -> Void{
         let leftPadding:CGFloat = 12.0
         let topPadding:CGFloat = 17.0
@@ -66,7 +71,7 @@ class ChooseBookView: MDCSwipeToChooseView {
             CGRectGetHeight(self.informationView.frame) - topPadding)
         self.titleLabel = UILabel(frame:frame)
         self.titleLabel.text = "\(book.title)"
-        self.titleLabel.font = titleLabel.font.fontWithSize(10)
+        self.titleLabel.font = titleLabel.font.fontWithSize(15)
         self.informationView.addSubview(self.titleLabel)
     }
 

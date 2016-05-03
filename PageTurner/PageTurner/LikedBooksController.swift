@@ -69,10 +69,8 @@ class LikedBooksController : UITableViewController {
     }
     
     override func tableView(tableView: UITableView, didHighlightRowAtIndexPath indexPath: NSIndexPath) {
-        print("row tapped: \(indexPath.row)")
         let book = likedBooks[indexPath.row]
         likedBook = book
-        print(likedBook.valueForKey("title"))
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

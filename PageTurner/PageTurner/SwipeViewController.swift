@@ -179,8 +179,8 @@ class SwipeViewController: UIViewController, MDCSwipeToChooseDelegate{
     // the method doesnt finish in time and we get a nil exception when it tries to create the first card
     func getInitialBooks() -> [Book]{
         books = [Book]()
-        books.append(Book(title: "Welcome to PageTurner!", author: "Test author 1", imageURL: "", summary: "the end", isbn: "111114441", asin: "10142978X", instruction: true))
-        books.append(Book(title: "Have fun Swiping!", author: "Test author 1", imageURL: "", summary: "the end", isbn: "111114441", asin: "10142978X", instruction: true))
+        books.append(Book(title: "Welcome to PageTurner!", author: "", imageURL: "", summary: "PageTurner is the easiest way to find Book recommendations! \n \nSwipe right to add a book to your 'Favorites' and swipe left to skip the book.", isbn: "", asin: "", instruction: true))
+        books.append(Book(title: "Have fun Swiping!", author: "", imageURL: "", summary: "You can view your Liked books in the Favorites tab. \n \nYou can swipe on the entry to delete it, or tap on it to view it in greater detail.", isbn: "", asin: "", instruction: true))
         return books
     }
     
