@@ -44,7 +44,7 @@ class ChooseBookView: MDCSwipeToChooseView {
         //fatalError("init(coder:) has not been implemented")
     }
     func constructInformationView() -> Void{
-        let bottomHeight:CGFloat = 60.0
+        let bottomHeight:CGFloat = 40.0
         let bottomFrame:CGRect = CGRectMake(0,
             CGRectGetHeight(self.bounds) - bottomHeight,
             CGRectGetWidth(self.bounds),
