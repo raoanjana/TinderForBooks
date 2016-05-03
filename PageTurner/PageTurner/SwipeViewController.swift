@@ -180,7 +180,7 @@ class SwipeViewController: UIViewController, MDCSwipeToChooseDelegate{
     func getInitialBooks() -> [Book]{
         books = [Book]()
         books.append(Book(title: "Welcome to PageTurner!", author: "Test author 1", imageURL: "", summary: "the end", isbn: "111114441", asin: "10142978X", instruction: true))
-        books.append(Book(title: "Have fun Swiping!", author: "Test author 1", imageURL: "https://pbs.twimg.com/profile_images/664257671768354816/w2ZlpSd6.png", summary: "the end", isbn: "111114441", asin: "10142978X", instruction: true))
+        books.append(Book(title: "Have fun Swiping!", author: "Test author 1", imageURL: "", summary: "the end", isbn: "111114441", asin: "10142978X", instruction: true))
         return books
     }
     

@@ -21,10 +21,16 @@ class ChooseBookView: MDCSwipeToChooseView {
         super.init(frame: frame, options: options)
         self.book = book
         let imageURL = self.book.imageURL
-        let url = NSURL(string: imageURL as String)
-        //initoalizes imageview
-        downloadImage(url!)
-        //self.imageView.image = image
+        if imageURL == ""{
+            self.imageView.image = UIImage(named: "InstructionCard.jpg")
+        }
+        else{
+            let url = NSURL(string: imageURL as String)
+            //initoalizes imageview
+            downloadImage(url!)
+
+        }
+                //self.imageView.image = image
         self.autoresizingMask = [UIViewAutoresizing.FlexibleHeight, UIViewAutoresizing.FlexibleWidth]
         UIViewAutoresizing.FlexibleBottomMargin
         
