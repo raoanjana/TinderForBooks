@@ -13,6 +13,7 @@ import CoreData
 class LikedBooksController : UITableViewController {
     var likedBooks = [NSManagedObject]()
     var likedBook : NSManagedObject!
+    
     required init?(coder aDecoder: NSCoder) {
         // initialize properties here
         super.init(coder : aDecoder)
@@ -41,23 +42,43 @@ class LikedBooksController : UITableViewController {
         return 1
     }
     
+    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return true
+    }
+    
+    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if (editingStyle == UITableViewCellEditingStyle.Delete) {
+            let book = likedBooks[indexPath.row]
+            HelperMethods().deleteFromCoreData(book.valueForKey("asin") as! String)
+            likedBooks.removeAtIndex(indexPath.row)
+            self.tableView.reloadData()
+        }
+    }
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCellWithIdentifier("LikedBookCell", forIndexPath: indexPath) as UITableViewCell
         
         let book = likedBooks[indexPath.row]
-        likedBook = book
         cell.textLabel!.text = book.valueForKey("title") as? String
         
        // set the cell imageview
-        cell.imageView
+//        cell.imageView
         
         return cell
     }
+    
+    override func tableView(tableView: UITableView, didHighlightRowAtIndexPath indexPath: NSIndexPath) {
+        print("row tapped: \(indexPath.row)")
+        let book = likedBooks[indexPath.row]
+        likedBook = book
+        print(likedBook.valueForKey("title"))
+    }
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
         if(segue.identifier == "bookSegue") {
-            
+            print("transitioning")
             let destinationVC = (segue.destinationViewController as! BookViewController)
             destinationVC.likedBook = likedBook
 
