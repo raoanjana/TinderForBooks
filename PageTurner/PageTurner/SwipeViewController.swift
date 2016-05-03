@@ -47,7 +47,7 @@ class SwipeViewController: UIViewController, MDCSwipeToChooseDelegate{
     
     func viewDidCancelSwipe(view: UIView) -> Void{
         
-        print("You couldn't decide on \(self.currentBook.title)");
+//        print("You couldn't decide on \(self.currentBook.title)");
     }
     
     // This is called then a user swipes the view fully left or right.
@@ -56,10 +56,10 @@ class SwipeViewController: UIViewController, MDCSwipeToChooseDelegate{
         // MDCSwipeToChooseView shows "NOPE" on swipes to the left,
         // and "LIKED" on swipes to the right.
         if(wasChosenWithDirection == MDCSwipeDirection.Left){
-            print("You noped: \(self.currentBook.title)")
+//            print("You noped: \(self.currentBook.title)")
         }
         else{
-            print("You liked: \(self.currentBook.title)")
+//            print("You liked: \(self.currentBook.title)")
             self.saveBook(self.currentBook)
         }
         
@@ -151,6 +151,14 @@ class SwipeViewController: UIViewController, MDCSwipeToChooseDelegate{
                 guard let newBooks : [Book] = data else {
                     return
                 }
+                
+                // if this returns no books make a slightly dangerous call to get more books
+                // ~technically~ could result in an infinite loop, but you would need to swipe for a loooooong time
+                if newBooks.count == 0 {
+                    self.updateBooks()
+                    return
+                }
+                
                 // add all new books to our thing
                 for bookObject : Book in newBooks {
                     self.books.append(bookObject)
@@ -177,7 +185,7 @@ class SwipeViewController: UIViewController, MDCSwipeToChooseDelegate{
     }
     
     // save the book to core data
-    func saveBook(book : Book){
+    func saveBook(book : Book) {
         // we dont want to save our sample cards
         if (book.instruction) {
             return
@@ -198,7 +206,6 @@ class SwipeViewController: UIViewController, MDCSwipeToChooseDelegate{
         
         do {
             try managedContext.save()
-//            likedBooks.append(bookToSave)
         } catch let error as NSError  {
             print("Could not save \(error), \(error.userInfo)")
         }

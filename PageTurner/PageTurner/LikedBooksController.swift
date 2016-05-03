@@ -11,12 +11,10 @@ import UIKit
 import CoreData
 
 class LikedBooksController : UITableViewController {
-    var source :[ Book]
     var likedBooks = [NSManagedObject]()
     var likedBook : NSManagedObject!
     required init?(coder aDecoder: NSCoder) {
         // initialize properties here
-        source = [Book]()
         super.init(coder : aDecoder)
     }
     
@@ -28,19 +26,9 @@ class LikedBooksController : UITableViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
-        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        
-        let managedContext = appDelegate.managedObjectContext
-        
-        let fetchRequest = NSFetchRequest(entityName: "LikedBook")
-        
-        do {
-            let results = try managedContext.executeFetchRequest(fetchRequest)
-            likedBooks = results as! [NSManagedObject]
+        if let allLikedBooks = HelperMethods().getAllLikedBooks() {
+            self.likedBooks = allLikedBooks
             self.tableView.reloadData()
-            
-        } catch let error as NSError {
-            print("Could not fetch \(error), \(error.userInfo)")
         }
     }
     
