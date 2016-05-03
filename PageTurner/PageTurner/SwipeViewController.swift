@@ -22,14 +22,13 @@ class SwipeViewController: UIViewController, MDCSwipeToChooseDelegate{
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        self.books = getInitialBooks()              // our problem here is that we cant just wait for updateBooks to finish since it tries to create cards before that happens
+        self.books = getInitialBooks()      
         self.updateBooks()
     }
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         self.books = getInitialBooks()
         self.updateBooks()
-        // Here you can init your properties
     }
     
     override func viewDidLoad() {
@@ -45,6 +44,7 @@ class SwipeViewController: UIViewController, MDCSwipeToChooseDelegate{
         return UIInterfaceOrientationMask.Portrait
     }
     
+    // this is called when the user lets go of a card mid swipe
     func viewDidCancelSwipe(view: UIView) -> Void{
         
 //        print("You couldn't decide on \(self.currentBook.title)");
@@ -56,10 +56,8 @@ class SwipeViewController: UIViewController, MDCSwipeToChooseDelegate{
         // MDCSwipeToChooseView shows "NOPE" on swipes to the left,
         // and "LIKED" on swipes to the right.
         if(wasChosenWithDirection == MDCSwipeDirection.Left){
-//            print("You noped: \(self.currentBook.title)")
         }
         else{
-//            print("You liked: \(self.currentBook.title)")
             self.saveBook(self.currentBook)
         }
         
@@ -129,7 +127,7 @@ class SwipeViewController: UIViewController, MDCSwipeToChooseDelegate{
     
     func backCardViewFrame() ->CGRect{
         let frontFrame:CGRect = frontCardViewFrame()
-        return CGRectMake(frontFrame.origin.x, frontFrame.origin.y + 10.0, CGRectGetWidth(frontFrame), CGRectGetHeight(frontFrame))
+        return CGRectMake(frontFrame.origin.x, frontFrame.origin.y + 5.0, CGRectGetWidth(frontFrame), CGRectGetHeight(frontFrame))
 
     }
     

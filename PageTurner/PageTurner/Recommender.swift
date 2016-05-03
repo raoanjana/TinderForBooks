@@ -17,6 +17,9 @@ struct APIConfig {
 class Recommender {
     
     // return a list of books that are similar to previously liked books
+    // queries our api which queries Amazon for us, since Amazon requires
+    // a complex cryptographic signature that would be very complex to do in
+    // swift
     func getRandomRecommendations(first : Bool, completionHandler: (([Book]?, NSError?) -> Void)!) -> Void {
         print("getting random recommendations")
         var asins : String
@@ -68,8 +71,9 @@ class Recommender {
         }
         
         
-        for index in 1...numParams {
+        for var index = 1; index <= numParams && previousBooks.count > 0; index++ {
             let randomIndex : Int = Int(arc4random_uniform(UInt32(previousBooks.count)))
+            
             let asin = previousBooks[randomIndex].valueForKey("asin") as! String
             previousBooks.removeAtIndex(randomIndex)
             
@@ -77,14 +81,18 @@ class Recommender {
                 queryString += "&"
             }
             queryString += "asin\(index)=\(asin)"
+            
+            if (previousBooks.count == 0) {
+                continue
+            }
         }
         
         return queryString
     }
     
+    // converts the JSON array we recieve into an array of Book objects
     func parseDataIntoBooks(data : NSData?) -> [Book]? {
         do {
-            // Try and parse the data, this will fail
             let arr : NSArray =  try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.AllowFragments) as! NSArray
         
             var bookArray : [Book] = [Book]()
@@ -156,6 +164,7 @@ class Recommender {
         return false
     }
     
+    // whenever we encounter a new book we save it, so we dont get repeats
     func saveAsin(asin : NSString) {
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         let managedContext = appDelegate.managedObjectContext

@@ -29,7 +29,7 @@ class ChooseBookView: MDCSwipeToChooseView {
             
         else{
             let url = NSURL(string: imageURL as String)
-            //initoalizes imageview
+            //initalizes imageview
             downloadImage(url!)
 
         }

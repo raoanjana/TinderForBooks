@@ -64,8 +64,31 @@ class LikedBooksController : UITableViewController {
         
        // set the cell imageview
 //        cell.imageView
+        let url = NSURL(string: book.valueForKey("image_url") as! String)
+        downloadImage(url!, cell: cell)
+        //initalizes imageview
         
         return cell
+    }
+    
+    func getData(url:NSURL, completion: ((data: NSData?, response: NSURLResponse?, error: NSError? ) -> Void)) {
+        NSURLSession.sharedSession().dataTaskWithURL(url) { (data, response, error) in
+            completion(data: data, response: response, error: error)
+            }.resume()
+    }
+    
+    func downloadImage(url: NSURL, cell : UITableViewCell){
+        getData(url) { (data, response, error)  in
+            dispatch_async(dispatch_get_main_queue()) { () -> Void in
+                guard let data = data where error == nil else {
+                    // Something went wrong getting the image out
+                    cell.imageView!.image = UIImage(named: "NoImage.png")
+                    return
+                }
+                let imageTest = UIImage(data: data)
+                cell.imageView!.image = imageTest
+            }
+        }
     }
     
     override func tableView(tableView: UITableView, didHighlightRowAtIndexPath indexPath: NSIndexPath) {
