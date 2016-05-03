@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7E8EC4DD1CD7FD45000A4833 /* BookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8EC4DC1CD7FD45000A4833 /* BookViewController.swift */; };
 		7EBAA13F1CD40F3300326E9C /* SwipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBAA13E1CD40F3300326E9C /* SwipeViewController.swift */; };
 		7EBAA1411CD41CBF00326E9C /* ChooseBookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBAA1401CD41CBF00326E9C /* ChooseBookView.swift */; };
 		7EBAA1431CD41F1B00326E9C /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBAA1421CD41F1B00326E9C /* Book.swift */; };
@@ -24,6 +25,7 @@
 /* Begin PBXFileReference section */
 		0FB410B276B34AE9A117740A /* Pods-PageTurner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PageTurner.release.xcconfig"; path = "Pods/Target Support Files/Pods-PageTurner/Pods-PageTurner.release.xcconfig"; sourceTree = "<group>"; };
 		15C4C90D124D10FA70BEA8C7 /* Pods_PageTurner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PageTurner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E8EC4DC1CD7FD45000A4833 /* BookViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookViewController.swift; sourceTree = "<group>"; };
 		7EBAA13D1CD40C2F00326E9C /* BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
 		7EBAA13E1CD40F3300326E9C /* SwipeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeViewController.swift; sourceTree = "<group>"; };
 		7EBAA1401CD41CBF00326E9C /* ChooseBookView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseBookView.swift; sourceTree = "<group>"; };
@@ -74,6 +76,7 @@
 			children = (
 				C029CFB01CD6BA8A00727224 /* LikedBooksController.swift */,
 				7EBAA13E1CD40F3300326E9C /* SwipeViewController.swift */,
+				7E8EC4DC1CD7FD45000A4833 /* BookViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -268,6 +271,7 @@
 				7EBAA1411CD41CBF00326E9C /* ChooseBookView.swift in Sources */,
 				C029CFB51CD8025400727224 /* HelperMethods.swift in Sources */,
 				C029CFAF1CD6B78C00727224 /* DataModel.xcdatamodeld in Sources */,
+				7E8EC4DD1CD7FD45000A4833 /* BookViewController.swift in Sources */,
 				7EBAA13F1CD40F3300326E9C /* SwipeViewController.swift in Sources */,
 				C0C56E5C1CD54BE300392628 /* Recommender.swift in Sources */,
 			);

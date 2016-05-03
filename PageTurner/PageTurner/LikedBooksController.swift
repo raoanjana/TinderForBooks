@@ -12,7 +12,7 @@ import CoreData
 
 class LikedBooksController : UITableViewController {
     var likedBooks = [NSManagedObject]()
-    
+    var likedBook : NSManagedObject!
     required init?(coder aDecoder: NSCoder) {
         // initialize properties here
         super.init(coder : aDecoder)
@@ -46,13 +46,21 @@ class LikedBooksController : UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("LikedBookCell", forIndexPath: indexPath) as UITableViewCell
         
         let book = likedBooks[indexPath.row]
-        
+        likedBook = book
         cell.textLabel!.text = book.valueForKey("title") as? String
         
-        // set the cell imageview
-        // cell.imageView
+       // set the cell imageview
+        cell.imageView
         
         return cell
     }
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        if(segue.identifier == "bookSegue") {
+            
+            let destinationVC = (segue.destinationViewController as! BookViewController)
+            destinationVC.likedBook = likedBook
 
+        }
+    }
 }
