@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7E8EC4DD1CD7FD45000A4833 /* BookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8EC4DC1CD7FD45000A4833 /* BookViewController.swift */; };
+		7E8EC4E11CD82345000A4833 /* NoImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E8EC4E01CD82345000A4833 /* NoImage.png */; };
 		7EBAA13F1CD40F3300326E9C /* SwipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBAA13E1CD40F3300326E9C /* SwipeViewController.swift */; };
 		7EBAA1411CD41CBF00326E9C /* ChooseBookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBAA1401CD41CBF00326E9C /* ChooseBookView.swift */; };
 		7EBAA1431CD41F1B00326E9C /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBAA1421CD41F1B00326E9C /* Book.swift */; };
@@ -27,6 +28,7 @@
 		0FB410B276B34AE9A117740A /* Pods-PageTurner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PageTurner.release.xcconfig"; path = "Pods/Target Support Files/Pods-PageTurner/Pods-PageTurner.release.xcconfig"; sourceTree = "<group>"; };
 		15C4C90D124D10FA70BEA8C7 /* Pods_PageTurner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PageTurner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E8EC4DC1CD7FD45000A4833 /* BookViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookViewController.swift; sourceTree = "<group>"; };
+		7E8EC4E01CD82345000A4833 /* NoImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = NoImage.png; path = ../../../../../Documents/NoImage.png; sourceTree = "<group>"; };
 		7EBAA13D1CD40C2F00326E9C /* BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
 		7EBAA13E1CD40F3300326E9C /* SwipeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeViewController.swift; sourceTree = "<group>"; };
 		7EBAA1401CD41CBF00326E9C /* ChooseBookView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseBookView.swift; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 		C0C694E41CD1A17A0048BEE2 /* PageTurner */ = {
 			isa = PBXGroup;
 			children = (
+				7E8EC4E01CD82345000A4833 /* NoImage.png */,
 				C029CFB81CD823B100727224 /* InstructionCard.png */,
 				7E6E04411CD530CC002EE66A /* Supporting Files */,
 				7E6E04401CD52EFC002EE66A /* Controllers */,
@@ -209,6 +212,7 @@
 			files = (
 				C0C694F31CD1A17A0048BEE2 /* LaunchScreen.storyboard in Resources */,
 				C0C694F01CD1A17A0048BEE2 /* Assets.xcassets in Resources */,
+				7E8EC4E11CD82345000A4833 /* NoImage.png in Resources */,
 				C029CFB91CD823B100727224 /* InstructionCard.png in Resources */,
 				C0C694EB1CD1A17A0048BEE2 /* Main.storyboard in Resources */,
 			);
