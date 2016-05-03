@@ -8,7 +8,11 @@
         <attribute name="summary" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
+    <entity name="PreviouslyLiked" syncable="YES">
+        <attribute name="asin" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <elements>
         <element name="LikedBook" positionX="-63" positionY="-18" width="128" height="135"/>
+        <element name="PreviouslyLiked" positionX="-54" positionY="36" width="128" height="60"/>
     </elements>
 </model>
